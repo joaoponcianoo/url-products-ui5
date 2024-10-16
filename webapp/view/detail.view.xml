@@ -1,0 +1,33 @@
+<mvc:View
+    controllerName="urlproducts.controller.detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    displayBlock="true"
+    height="100%"
+    busyIndicatorDelay="0"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Page title="Detail to {oViewDetail>/product/ProductName}">
+        <content>
+            <f:SimpleForm title="Details">
+                <f:content>
+                    <Label text="Product Name"></Label>
+                    <Text text="{oViewDetail>/product/ProductName}"></Text>
+
+                    <Label text="Supplier ID"></Label>
+                    <Text text="{oViewDetail>/product/SupplierID}"></Text>
+
+                    <Label text="Category ID"></Label>
+                    <Text text="{oViewDetail>/product/CategoryID}"></Text>
+
+                    <Label text="Quantity Per Unit"></Label>
+                    <Text text="{oViewDetail>/product/QuantityPerUnit}"></Text>
+
+                    <Label text="Quantity Per Unit"></Label>
+                    <Text text="{oViewDetail>/product/QuantityPerUnit}"></Text>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

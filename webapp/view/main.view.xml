@@ -1,0 +1,67 @@
+<mvc:View
+    controllerName="urlproducts.controller.main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table items="{/Products}">
+<!-- 
+            <Table items="{
+                path: '/Products',
+                sorter: {
+                    path: 'ID',
+                    descending: false
+                },
+                parameters: {
+                    expand: 'Supplier'
+                }
+            }">
+            <Text text="{Supplier/Name}" />
+-->
+                <columns>
+                    <Column>
+                        <Text text="Product Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Supplier Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Category ID" />
+                    </Column>
+                    <Column>
+                        <Text text="Quantity PerUnit" />
+                    </Column>
+                    <Column>
+                        <Text text="Unit Price" />
+                    </Column>
+                    <Column>
+                        <Text text="Units In Stock" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem
+                        type="Navigation"
+                        press="onColumnListItemPress"
+                    >
+                        <cells>
+                            <Text text="{ProductName}" />
+                            <Text text="{
+                                path: 'SupplierID',
+                                formatter: '.formatter.formatterSupplierName'        
+                            }" />
+                            <Text text="{CategoryID}" />
+                            <Text text="{QuantityPerUnit}" />
+                            <Text text="{UnitPrice}" />
+                            <Text text="{UnitsInStock}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
